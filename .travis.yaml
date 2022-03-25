@@ -5,10 +5,10 @@ services:
 
 script:
   - docker --version
-  - docker-compose -f docker/docker-compose-build.yml build
+  - docker-compose -f docker-compose-build.yml build
 
 deploy:
   provider: script
-  script: bash docker/docker_push.sh
+  script: bash docker_push.sh
   on:
     branch: master
